@@ -1,0 +1,18 @@
+* text=auto !eol
+/Makefile -text
+/apertium-tha.tha.dix -text
+dev/thai.speling -text
+dev/wiktionary/abbr.txt -text
+dev/wiktionary/adjec.txt -text
+dev/wiktionary/adv.txt -text
+dev/wiktionary/class.txt -text
+dev/wiktionary/conj.txt -text
+dev/wiktionary/det.txt -text
+dev/wiktionary/interj.txt -text
+dev/wiktionary/nouns.txt -text
+dev/wiktionary/np-ant-f.txt -text
+dev/wiktionary/np-ant-m.txt -text
+dev/wiktionary/part.txt -text
+dev/wiktionary/prep.txt -text
+dev/wiktionary/pron.txt -text
+dev/wiktionary/verbs.txt -text
