@@ -2,6 +2,7 @@
 /Makefile -text
 /apertium-tha.tha.dix -text
 dev/thai.speling -text
+dev/thai.wiktionary.speling -text
 dev/wiktionary/abbr.txt -text
 dev/wiktionary/adjec.txt -text
 dev/wiktionary/adv.txt -text
