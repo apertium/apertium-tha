@@ -1,6 +1,15 @@
 * text=auto !eol
-/Makefile -text
+/AUTHORS -text
+/COPYING -text
+/ChangeLog -text
+/Makefile.am -text
+/NEWS -text
+/README -text
+/apertium-tha.pc.in -text
 /apertium-tha.tha.dix -text
+/apertium-tha.tha.rlx -text
+/autogen.sh -text
+/configure.ac -text
 dev/thai.speling -text
 dev/thai.wiktionary.speling -text
 dev/wiktionary/abbr.txt -text
@@ -17,3 +26,4 @@ dev/wiktionary/part.txt -text
 dev/wiktionary/prep.txt -text
 dev/wiktionary/pron.txt -text
 dev/wiktionary/verbs.txt -text
+/modes.xml -text
