@@ -6,6 +6,7 @@
 /NEWS -text
 /README -text
 /apertium-tha.pc.in -text
+/apertium-tha.post-tha.dix -text
 /apertium-tha.tha.dix -text
 /apertium-tha.tha.rlx -text
 /autogen.sh -text
