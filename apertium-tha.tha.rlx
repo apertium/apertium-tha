@@ -1,9 +1,20 @@
 DELIMITERS = "<๚>" ; 
 
-LIST N = n np ;
-LIST Det = det ;
+LIST Adj = adj ;
 LIST Cla = cla ;
-
+LIST Det = det ;
+LIST N = n np ;
+LIST Pr = pr ;
+LIST Verb = vblex vbser ;
+LIST Prn = prn ;
+LIST Adv = adv ;
 SECTION
 
 SELECT Cla IF (-1 N) (1 Det) ;
+SELECT Pr IF (1 N) ;
+SELECT Pr IF (NOT -1 Verb) ;
+REMOVE Verb IF (NOT -1* Prn) ;
+REMOVE Prn IF (0 ("เพื่อน")) ;
+SELECT Adv IF (1 Verb) ;
+SELECT Adv IF (1 Adv) ;
+REMOVE Verb IF (0 ("ฉัน")) (NOT -1 ("พระ")) ;
