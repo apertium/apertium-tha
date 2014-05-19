@@ -1,7 +1,9 @@
 DELIMITERS = "<๚>" ; 
 
-LIST N = n ;
+LIST N = n np ;
+LIST Det = det ;
+LIST Cla = cla ;
 
 SECTION
 
-SELECT N ;
+SELECT Cla IF (-1 N) (1 Det) ;
