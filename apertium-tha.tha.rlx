@@ -6,15 +6,53 @@ LIST Det = det ;
 LIST N = n np ;
 LIST Pr = pr ;
 LIST Verb = vblex vbser ;
+LIST Vblex = vblex ;
+LIST Vbser = vbser ;
 LIST Prn = prn ;
 LIST Adv = adv ;
+LIST Num = num ;
+LIST Conj = conj cnjsub cnjcoo ;
+
 SECTION
 
-SELECT Cla IF (-1 N) (1 Det) ;
-SELECT Pr IF (1 N) ;
-SELECT Pr IF (NOT -1 Verb) ;
-REMOVE Verb IF (NOT -1* Prn) ;
-REMOVE Prn IF (0 ("เพื่อน")) ;
 SELECT Adv IF (1 Verb) ;
 SELECT Adv IF (1 Adv) ;
+SELECT Adv IF (-2 N) (-1 Det) (1 Cla) ;
+
+SELECT Adj IF (-1 Cla) (0 N) ;
+SELECT Adj IF (-1 N) (0 N) ;
+SELECT Adj IF (-1 Cla) (0 Adv) ;
+SELECT Adj IF (-1 Cla) (0 Det) ;
+
+SELECT Cla IF (-1 N) (1 Det) ;
+SELECT Cla IF (-1 Num) ;
+SELECT Cla IF (-1 N) (0 N) ;
+SELECT Cla IF (-1 Det) (0 N) (NOT 0 Pr) ;
+SELECT Cla IF (-1 Adv) (-2 Det) ;
+SELECT Cla IF (-1 Vblex) (0 N) ;
+SELECT Cla IF (-1 ("ทั้ง")) (0 N) ;
+
+SELECT Conj IF (-1 Adv) ; 
+SELECT Conj IF (-2 Verb) (-1 N) ;
+SELECT Conj IF (-1 Verb) (0 Verb) ;
+
+SELECT Det IF (-1 N) (1 Cla) ;
+
+SELECT N IF (-1 Verb) (0 Verb) ;
+SELECT N IF (-1 Pr) (0 Adj)
+
+SELECT Num IF (1 Cla) ;
+
+SELECT Pr IF (1 N) ;
+SELECT Pr IF (NOT -1 Verb) ;
+SELECT Pr IF (-1 Verb) ;
+
+REMOVE Prn IF (0 ("เพื่อน")) ;
+
+SELECT Vbser IF (1 N) ; 
+SELECT Vbser IF (0 ("อยู่")) (-1 Cla) ;
+
+SELECT Verb IF (0 Adj) (1 N) ;
 REMOVE Verb IF (0 ("ฉัน")) (NOT -1 ("พระ")) ;
+SELECT Verb IF (0 N) (-1 Cla) ;
+
