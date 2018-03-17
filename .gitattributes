@@ -28,3 +28,8 @@ dev/wiktionary/prep.txt -text
 dev/wiktionary/pron.txt -text
 dev/wiktionary/verbs.txt -text
 /modes.xml -text
+*.dix linguist-language=XML linguist-detectable=true
+*.lrx linguist-language=XML linguist-detectable=true
+*.lsx linguist-language=XML linguist-detectable=true
+*.tsx linguist-language=XML linguist-detectable=true
+*.t[[:digit:]]x linguist-language=XML linguist-detectable=true
