@@ -2,8 +2,6 @@
 ## Makefile for apertium-tha
 ###############################################################################
 
-RELEASE=0.1
-VERSION=0.1.0
 LANG1=tha
 BASENAME=apertium-$(LANG1)
 
@@ -56,7 +54,7 @@ EXTRA_DIST=$(BASENAME).$(LANG1).dix \
 apertium_thadir=$(prefix)/share/apertium/$(BASENAME)/
 apertium_tha_srcdir=$(prefix)/share/apertium/$(BASENAME)/
 
-apertium_tha_DATA=$(TARGETS_COMMON)
+apertium_tha_DATA=$(TARGETS_COMMON) $(BASENAME).$(LANG1).rlx
 
 pkgconfigdir = $(prefix)/share/pkgconfig
 pkgconfig_DATA = $(BASENAME).pc
