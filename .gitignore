@@ -16,3 +16,12 @@
 /tha.automorf.att.gz
 /tha.automorf.bin
 /tha.rlx.bin
+/*.hfst
+/*.zhfst
+/.DS_Store
+/*.mode
+/*-*.prob
+/.deps
+/config.in
+/config
+/test/*-output.txt
